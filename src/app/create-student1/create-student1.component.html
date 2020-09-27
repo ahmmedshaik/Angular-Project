@@ -1,0 +1,38 @@
+<h3>Save Student Details</h3>
+<div style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="id">Id</label>
+        <input type="text" class="form-control" id="id" required [(ngModel)]="student1.id" name="id">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="student1.name" name="name" >
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Dob</label>
+        <input type="date" class="form-control" id="dob" required [(ngModel)]="student1.dob" name="dob" >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" required [(ngModel)]="student1.email" name="email" >
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input type="text" class="form-control" id="mobile" required [(ngModel)]="student1.mobile" name="mobile" >
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+      <!--<button type="reset" class="btn btn-success">Resset</button>-->
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h4>Submitted Successfully</h4>
+</div>
+
+

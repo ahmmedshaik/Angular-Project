@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Exam List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+              <th>ExamId</th>
+              <th>ExamName</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let exam of exams | async">
+              <td>{{exam.id}}</td>
+              <td>{{exam.name}}</td>
+            </tr>
+        </tbody>
+      </table>
+      <button (click)="createExam(exams)" class="btn btn-dark">Add Exam</button>
+    </div>
+</div>
+
+
